@@ -23,34 +23,33 @@
         />
 
     <Button
+        android:id="@+id/wbtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         android:background="@drawable/btnbg"
         android:text="Weather"
         android:textSize="30dp"
         />
     <Button
+        android:id="@+id/cbtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:background="@drawable/btnbg"
-        android:text="Weather"
+        android:text="Countrys"
         android:textSize="30dp"
         />
 
     <Button
+        android:id="@+id/fbtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:background="@drawable/btnbg"
-        android:text="Weather"
+        android:text="Flights"
         android:textSize="30dp"
         />
-
-
-
-
 
 
 </LinearLayout>
