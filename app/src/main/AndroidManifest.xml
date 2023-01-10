@@ -34,7 +34,7 @@
             android:exported="false">
             <meta-data
                 android:name="com.google.android.gms.ads.APPLICATION_ID"
-                android:value="ca-app-pub-3940256099942544~3347511713"/>
+                android:value="e53301e27efa0b66d05045d91b2742d3"/>
         </activity>
         <activity
             android:name=".MainActivity"
