@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
+import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
@@ -19,7 +20,6 @@ import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
-import com.google.android.gms.common.api.Response;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -89,7 +89,7 @@ public class weather extends AppCompatActivity {
                         JSONObject jsonObjectSys = jsonResponse.getJSONObject("sys");
                         String countryName = jsonObjectSys.getString("country");
                         String cityName = jsonResponse.getString("name");
-                        tvResult.setTextColor(Color.rgb(68,134,199));
+                        tvResult.setTextColor(Color.rgb(68, 134, 199));
                         output += "Current weather of " + cityName + " (" + countryName + ")"
                                 + "\n Temp: " + df.format(temp) + " °C"
                                 + "\n Feels Like: " + df.format(feelsLike) + " °C"
@@ -103,12 +103,13 @@ public class weather extends AppCompatActivity {
                         e.printStackTrace();
                     }
                 }
-            }, new Response.ErrorListener(){
+            }, new com.android.volley.Response.ErrorListener() {
                 @Override
                 public void onErrorResponse(VolleyError error) {
                     Toast.makeText(getApplicationContext(), error.toString().trim(), Toast.LENGTH_SHORT).show();
                 }
-            });
+            }
+            );
             RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
             requestQueue.add(stringRequest);
         }
